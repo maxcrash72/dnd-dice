@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 
 import { PopoverTray } from "./PopoverTray";
+import { SelfTray, SELF_TRAY_ID } from "./SelfTray";
+import { DiceRollSync } from "./DiceRollSync";
 import { getPluginId } from "./getPluginId";
 
 export function PopoverTrays() {
@@ -19,7 +21,7 @@ export function PopoverTrays() {
   useEffect(() => {
     const playerIds = players.map((p) => p.connectionId);
     setVisibleTrays((visible) =>
-      visible.filter((id) => playerIds.includes(id))
+      visible.filter((id) => id === SELF_TRAY_ID || playerIds.includes(id))
     );
   }, [players]);
 
@@ -74,6 +76,9 @@ export function PopoverTrays() {
           onOpen={handleTrayOpen}
         />
       ))}
+      {/* Rolls requested by other extensions through the roll API */}
+      <SelfTray onToggle={handleTrayToggle} />
+      <DiceRollSync />
     </Box>
   );
 }

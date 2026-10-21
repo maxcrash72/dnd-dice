@@ -1,17 +1,17 @@
 {
-  "name": "Dice",
-  "version": "2.0.0",
+  "name": "Dice (dnd-sheet)",
+  "version": "2.1.0",
   "manifest_version": 1,
-  "author": "Owlbear Rodeo",
-  "homepage_url": "https://extensions.owlbear.rodeo/dice",
-  "icon": "/logo.png",
-  "description": "Beautiful 3D dice extension for d20 based systems",
+  "author": "maxcrash72, based on Dice by Owlbear Rodeo",
+  "homepage_url": "https://github.com/maxcrash72/dnd-dice",
+  "icon": "https://maxcrash72.github.io/dnd-dice/logo.png",
+  "description": "The official 3D dice with a roll API so the dnd-sheet character sheet can throw real dice",
   "action": {
     "title": "Dice",
-    "icon": "/icon.svg",
-    "popover": "/",
+    "icon": "https://maxcrash72.github.io/dnd-dice/icon.svg",
+    "popover": "https://maxcrash72.github.io/dnd-dice/",
     "height": 700,
     "width": 375
   },
-  "background_url": "/background.html"
+  "background_url": "https://maxcrash72.github.io/dnd-dice/background.html"
 }

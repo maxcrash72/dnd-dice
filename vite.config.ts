@@ -7,6 +7,8 @@ declare var __dirname: string;
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Served from GitHub Pages at https://maxcrash72.github.io/dnd-dice/
+  base: "/dnd-dice/",
   plugins: [react()],
   assetsInclude: ["**/*.glb", "**/*.hdr"],
   build: {
